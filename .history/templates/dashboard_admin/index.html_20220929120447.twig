@@ -1,0 +1,38 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}
+	{{ titlePage }}
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row ">
+			<div class="col-12 col-md-12 col-lg-12 text-center">
+				<h2>Modulos Habilitados</h2><hr>
+			</div>
+		</div>
+		<div align='center'>
+			<div class="row" style="margin:auto !important; paddindg:10px !important">
+				<div class="col-12 col-md-1 col-lg-1"></div>
+				<div class="col-12 col-md-2 col-lg-2" onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='white';">
+					<img src='{{ iconos["documentos"]["icon"] }}'><br>{{ iconos["documentos"]["titulo"]  }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2" onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='white';">
+					<img src='{{ iconos["auditoria"]["icon"] }}'><br>{{ iconos["auditoria"]["titulo"]  }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2" onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='white';">
+					<img src='{{ iconos["mejoramiento"]["icon"] }}'><br>{{ iconos["mejoramiento"]["titulo"]  }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2" onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='white';">
+					<img src='{{ iconos["organizacion"]["icon"] }}'><br>{{ iconos["organizacion"]["titulo"]  }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2" onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='white';">
+					<img src='{{ iconos["indicadores"]["icon"] }}'><br>{{ iconos["indicadores"]["titulo"]  }}
+
+				</div>
+			</div>
+			<div class="col-12 col-md-1 col-lg-1"></div>
+
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,107 @@
+.div01 {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+.div_login{
+  left: 0;
+  margin: auto !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: fixed;
+  width: calc(50% - 1.5rem);
+}
+.icon_nav_bar{
+  width: auto !important;
+  height:24px !important;
+}
+
+.icon_tools {
+  width: auto !important;
+  height: 36px !important;
+}
+.navBarBackGround {
+  background-color: #67c42b !important;
+}
+.boton01 {
+  background-color: #49c5c6 !important;
+  color: #ffffff !important;
+}
+
+.boton02 {
+  background-color: #1d0908 !important;
+  color: #ffffff !important;
+}
+
+.Head01 {
+  background-color: #080117 !important;
+  color: #ffffff !important;
+  font-size: 1em !important;
+}
+
+.Head02 {
+  background-color: #985830 !important;
+  color: #ffffff !important;
+  font-size: 1em !important;
+}
+
+.login_card {
+  vertical-align: middle !important;
+  width:300px !important;
+  left:15px !important;
+}
+.centrado {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@media (max-width: 412px) {
+  body {
+      font-size: 0.75em !important;
+  }
+}
+
+@media (max-width:991px){
+  .div_login {
+      display: none !important;
+    }
+}
+@media (min-width: 992px) {
+
+  .dropdown-menu .dropdown-toggle:after {
+    border-top: 0.3em solid transparent;
+    border-right: 0;
+    border-bottom: 0.3em solid transparent;
+    border-left: 0.3em solid;
+  }
+
+  .dropdown-menu .dropdown-menu {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dropdown-menu li {
+    position: relative;
+  }
+
+  .nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+
+  .nav-item .submenu-left {
+    right: 100%;
+    left: auto;
+  }
+
+  .dropdown-menu > li:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown-menu > li:hover > .submenu {
+    display: block;
+  }
+}

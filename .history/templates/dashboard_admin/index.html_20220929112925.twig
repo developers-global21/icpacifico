@@ -1,0 +1,37 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}
+	{{ titlePage }}
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row ">
+			<div class="col-12 col-md-12 col-lg-12 text-center">
+				<h2>Modulos Habilitados</h2><hr>
+			</div>
+		</div>
+		<div align='center'>
+			<div class="row" style="margin:auto !important; paddindg:10px !important">
+				<div class="col-12 col-md-1 col-lg-1"></div>
+				<div class="col-12 col-md-2 col-lg-2">
+					<img src='{{ icDoc }}'><br>{{ titleIcDoc }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2">
+					<img src='{{ icAud }}'><br>{{ titleIcAud }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2">
+					<img src='{{ icMej}}'><br>{{ titleIcMej }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2">
+					<img src='{{ icOrg }}'><br>{{ titleIcOrg }}
+				</div>
+				<div class="col-12 col-md-2 col-lg-2">
+					<img src='{{ icKpi }}'><br>{{ titleIcKpi }}
+				</div>
+			</div>
+			<div class="col-12 col-md-1 col-lg-1">{{ iconos["documentos"]["url"] }}</div>
+
+		</div>
+	</div>
+{% endblock %}
