@@ -1,0 +1,36 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}
+	{{ titlePage }}
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="row ">
+			<div class="col-12 col-md-12 col-lg-12 text-center">
+				<h1>Modulos Habilitados</h1>
+			</div>
+		</div>
+		<div align='center'>
+			<div class="row ">
+				<div class="col-12 col-md-1 col-lg-1">
+					<div class="card-body"><img src='{{ icDoc }}'><br>{{ titleIcDoc }}</div>
+				</div>
+				<div class="col-12 col-md-1 col-lg-1">
+					<div class="card-body"><img src='{{ icAud }}'><br>{{ titleIcAud }}</div>
+				</div>
+				<div class="col-12 col-md-1 col-lg-1">
+					<div class="card-body"><img src='{{ icMej}}'><br>{{ titleIcMej }}</div>
+				</div>
+				<div class="col-12 col-md-1 col-lg-1">
+					<div class="card-body"><img src='{{ icOrg }}'><br>{{ titleIcOrg }}</div>
+				</div>
+				<div class="col-12 col-md-1 col-lg-1">
+					<div class="card-body"><img src='{{ icKpi }}'><br>{{ titleIcKpi }}</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

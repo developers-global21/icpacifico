@@ -1,0 +1,59 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+  nameSystem: "Sistema de Gestión de la Calidad IC Pacífico"
+  fondo: "#1d0908"
+  logo: "/assets/images/logo-top.png"
+  icDoc: "/assets/images/icons8-documentos-96.png"
+  titleIcDoc: "Gestión Documental"
+  icAud: "/assets/images/icons8-asignacion-entregado-96.png"
+  titleIcAud: "Auditorías e Inspecciones"
+  icMej: "/assets/images/icons8-settings-96.png"
+  titleIcMej: "Mejoramiento Continuo"
+  icOrg: "/assets/images/icons8-organización-96.png"
+  titleIcOrg: "Contexto Org."
+  icKpi: "/assets/images/icons8-chart-96.png"
+  titleIcKpi: "Indicadores"
+  archivos: "%kernel.project_dir%/public/assets/archivos/"
+  iconos:
+    documentos:
+      icon: "1"
+      titulo: "Gestión Documental"
+      url: "vacio"
+    auditoria:
+      icon: "2"
+      titulo: "Auditorías e Inspecciones"
+      url: "vacio"
+    mejoramiento:
+      icon: "3"
+      titulo: "Mejoramiento Continuo"
+      url: "vacio"
+    organizacion:
+      icon: "4"
+      titulo: "Contexto Organizacional"
+      url: "vacio"
+    kpi:
+      icon: "5"
+      titulo: "Indicadores"
+      url: "vacio"
+
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  # makes classes in src/ available to be used as services
+  # this creates a service per class whose id is the fully-qualified class name
+  App\:
+    resource: "../src/"
+    exclude:
+      - "../src/DependencyInjection/"
+      - "../src/Entity/"
+      - "../src/Kernel.php"
+
+  # add more service definitions when explicit configuration is needed
+  # please note that last definitions always *replace* previous ones
