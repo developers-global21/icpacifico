@@ -1,0 +1,39 @@
+{% block barnav %}
+	<div align='center'>
+		<div class="row" style="margin:auto !important; ">
+			<div class="col-12 col-md-12 col-lg-12">
+				<table class="table navBarBackGround" style="cellspacing:0px !important; cellpadding:0px !important">
+					<tr class='text-center'>
+						<td title='{{ iconos["usuarios"]["titulo"] }}'>
+								<button class="btn btn-outline-primary btn-sm" title='{{ iconos["usuarios"]["titulo"] }}' onclick="document.location='{{ iconos["usuarios"]["url"] }}'"><img src='{{ iconos["usuarios"]["icon"] }}' class="icon_nav_bar"></button>
+						</td>
+						<td  title='{{ iconos["documentos"]["titulo"] }}'>
+							<button class="btn btn-outline-primary btn-sm" title='{{ iconos["documentos"]["titulo"] }}' onclick="document.location='{{ iconos["documentos"]["url"] }}'"><img src='{{ iconos["documentos"]["icon"] }}' class="icon_nav_bar"></button>							
+						</td>
+						<td  title='{{ iconos["auditoria"]["titulo"] }}'>
+							<button class="btn btn-outline-primary btn-sm" title='{{ iconos["auditoria"]["titulo"] }}' onclick="document.location='{{ iconos["auditoria"]["url"] }}'"><img src='{{ iconos["auditoria"]["icon"] }}' class="icon_nav_bar"></button>
+						</td>
+						<td title='{{ iconos["mejoramiento"]["titulo"] }}'>
+						<button class="btn btn-outline-primary btn-sm" title='{{ iconos["mejoramiento"]["titulo"] }}' onclick="document.location='{{ iconos["mejoramiento"]["url"] }}'"><img src='{{ iconos["mejoramiento"]["icon"] }}' class="icon_nav_bar"></button>							
+						</td>
+						<td onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='#cbdbfc';" title='{{ iconos["organizacion"]["titulo"] }}'>
+							<a href='{{ iconos["organizacion"]["url"] }}' style="text-decoration:none !important">
+								<img src='{{ iconos["organizacion"]["icon"] }}' class="icon_nav_bar">
+							</a>
+						</td>
+						<td onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='#cbdbfc';" title='{{ iconos["indicadores"]["titulo"] }}'>
+							<a href='{{ iconos["indicadores"]["url"] }}' style="text-decoration:none !important" target="_blank">
+								<img src='{{ iconos["indicadores"]["icon"] }}' class="icon_nav_bar">
+							</a>
+						</td>
+						<td onmouseover="this.style.background='#f5f5f5';" onmouseout="this.style.background='#cbdbfc';" title='{{ iconos["salida"]["titulo"] }}'>
+							<a href='{{ iconos["salida"]["url"] }}' style="text-decoration:none !important">
+								<img src='{{ iconos["salida"]["icon"] }}' class="icon_nav_bar">
+							</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

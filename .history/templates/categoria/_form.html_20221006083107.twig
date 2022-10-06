@@ -1,0 +1,22 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<div class="col-4 col-md-4 col-lg-4 text-center">
+	<button class="btn btn-outline-secondary btn-lg" title='Regresar al listado' onclick="document.location='{{ path('app_categoria_index') }}'">
+		<img src="../../assets/images/icons8-undo-96.png" class='icon_tools_edit'>
+	</button>
+</div>
+<div class="col-4 col-md-4 col-lg-4 text-center">
+	<button class="btn btn-outline-primary btn-lg" title="Guardar los datos">
+		<img src="../../assets/images/icons8-save-close-48.png" class='icon_tools_edit'>
+	</button>
+</div>
+<div class="col-4 col-md-4 col-lg-4 text-center">
+	{% if (nuevo == false) %}
+		<button class="btn btn-outline-danger btn-lg" title='Eliminar esta Categoria' onclick="javascript:borrar({{categorium.id }})">
+			<img src="../../assets/images/icons8-remove-tag-96.png" class='icon_tools_edit'>
+		</button>
+
+	{% endif %}
+</div>
+
+{{ form_end(form) }}

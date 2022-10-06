@@ -1,0 +1,83 @@
+{% extends 'base_admin2.html.twig' %}
+
+{% block title %}Subcategoria index{% endblock %}
+
+{% block body %}
+    <h1>Subcategoria index</h1>
+		<div class="row">
+			<div class="col-12 col-md-12 col-lg-12 navigation text-center">
+				<table class="table">
+					<tr>
+						<td width='75%' class='text-center'>
+							{{ knp_pagination_render(subcategorias) }}
+						</td>
+						<td width='25%'>
+							<div class='input-group'>
+								<label class='input-group-text'>Cantidad de Registros</label>
+								<select id='can_reg' name='can_reg' class="form-control" onchange="javascript:pagina()">
+									{% if (canReg == 5 ) %}
+										<option value="5" selected>5</option>
+									{% else %}
+										<option value="5">5</option>
+									{% endif %}
+
+									{% if (canReg == 10 ) %}
+										<option value="10" selected>10</option>
+									{% else %}
+										<option value="10">10</option>
+									{% endif %}
+
+									{% if (canReg == 20 ) %}
+										<option value="20" selected>20</option>
+									{% else %}
+										<option value="20">20</option>
+									{% endif %}
+
+									{% if (canReg == 50 ) %}
+										<option value="50" selected>50</option>
+									{% else %}
+										<option value="50">50</option>
+									{% endif %}
+
+									{% if (canReg == 100 ) %}
+										<option value="100" selected>100</option>
+									{% else %}
+										<option value="100">100</option>
+									{% endif %}
+								</select>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>	
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Directorio</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for subcategorium in subcategorias %}
+            <tr>
+                <td>{{ subcategorium.id }}</td>
+                <td>{{ subcategorium.nombre }}</td>
+                <td>{{ subcategorium.directorio }}</td>
+                <td>
+                    <a href="{{ path('app_subcategoria_show', {'id': subcategorium.id}) }}">show</a>
+                    <a href="{{ path('app_subcategoria_edit', {'id': subcategorium.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_subcategoria_new') }}">Create new</a>
+{% endblock %}

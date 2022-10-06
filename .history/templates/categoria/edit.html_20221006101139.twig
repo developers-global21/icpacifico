@@ -1,0 +1,55 @@
+{% extends 'base_admin2.html.twig' %}
+
+{% block title %}Editar Categoría
+{% endblock %}
+{% block javascripts %}
+	<script src="/assets/js/validacion_edit_categoria.js"></script>
+	<script src="/assets/js/validacion_delete_categoria.js"></script>
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6 col-lg-6" style='margin:auto !important'>
+				<div class="card">
+					<div class="card-header">
+						<h3>Editar Categoría</h3>
+					</div>
+					<div class="card-body">
+						<form id='f1' name='f1' method="POST">
+							<div class="row">
+								<div class="col-12 col-md-12 col-lg-12">
+									<label for="nombre">Nombre</label>
+									<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre de la categoría" required value='{{categorium.nombre}}'>
+								</div>
+							</div>
+							<div class="row">&nbsp;</div>
+							<div class="row">
+								<div class="col-4 col-md-4 col-lg-4 text-center">
+									<button class="btn btn-outline-secondary btn-lg" title='Regresar al listado' onclick="javascript:regresa()" >
+										<img src="../../assets/images/icons8-undo-96.png" class='icon_tools_edit'>
+									</button>
+								</div>
+								<div class="col-4 col-md-4 col-lg-4 text-center">
+									<button class="btn btn-outline-primary btn-lg" title='Guardar loss Datos' onclick="javascript:guardar()">
+										<img src="../../assets/images/icons8-save-close-48.png" class='icon_tools_edit'>
+
+									</button>
+								</div>
+								<div class="col-4 col-md-4 col-lg-4 text-center">
+									<button class="btn btn-outline-danger btn-lg" title='Eliminar esta Categoria' onclick="javascript:borrar({{categorium.id }})">
+										<img src="../../assets/images/icons8-remove-tag-96.png" class='icon_tools_edit'>
+									</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">&nbsp;</div>
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
