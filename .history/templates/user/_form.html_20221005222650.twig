@@ -1,0 +1,20 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<div class="row">
+	<div class="col-4 col-md-4 col-lg-4 text-center">
+		<button class="btn btn-secondary btn-lg" title='Regresar al listado' onclick="document.location='{{ path('app_user_index') }}'">
+			<img src="../../assets/images/icons8-undo-96.png" class='icon_tools_edit'>
+		</button>
+	</div>
+	<div class="col-4 col-md-4 col-lg-4 text-center">
+		<button class="btn btn-primary btn-lg" title="Guardar los datos">
+			<img src="../../assets/images/icons8-save-close-48.png" class='icon_tools_edit'>
+		</button>
+	</div>
+	<div class="col-4 col-md-4 col-lg-4 text-center">
+		{% if (nuevo = false) %}
+			{{ include('user/_delete_form.html.twig') }}
+		{% endif %}
+	</div>
+</div>
+{{ form_end(form) }}

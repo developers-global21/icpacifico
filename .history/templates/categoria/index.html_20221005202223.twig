@@ -1,0 +1,59 @@
+{% extends 'base_admin2.html.twig' %}
+
+{% block title %}Categorías
+{% endblock %}
+{% block javascripts %}
+	<script src="/assets/js/validacion_index_categoria.js"></script>
+	<script src="/assets/js/validacion_delete_categoria.js"></script>
+{% endblock %}
+{% block body %}
+	<div class="container-fluid">
+		<h1>Categorías</h1>
+		<table class="table table-bordered">
+			<thead class="bg-dark text-white">
+				<tr align='center'>
+					<th>Id</th>
+					<th>Nombre</th>
+					<th class='text-center d-none d-md-none d-lg-none d-xl-table-cell'>URL</th>
+					<th class='text-center d-none  d-xl-table-cell'>Procesos</th>
+					<th class='text-center d-none d-md-none d-lg-none d-xl-table-cell'>Subprocesos</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% set i = 1 %}
+				{% for categorium in categorias %}
+					<tr>
+						<td align='center'>{{ i}}</td>
+						<td>{{ categorium.nombre }}</td>
+						<td class='text-center d-none d-md-none d-lg-none d-xl-table-cell'>
+							<a href='{{ categorium.directorio|replace({ (directorio) : url_final }) }}/index.php?idcategoria={{categorium.id}}' target='_blank'>{{ categorium.directorio|replace({ (directorio) : url_final  }) }}/index.php?id={{categorium.id}}</a>
+						</td>
+						<td class='text-center d-none d-xl-table-cell'>&nbsp;</td>
+						<td class='text-center d-none d-md-none d-lg-none d-xl-table-cell'>&nbsp;</td>
+						<td align='center'>
+							<a href="javascript:mostrar({{categorium.id}})" title='Ver detalles de la Categoria'>
+								<img src="../../assets/images/icons8-view-tag-96.png" class='icon_tools_edit'>
+							</a>
+							<a href="{{ path('categoria_edit', {'id': categorium.id}) }}" title='Editar esta categoría'>
+								<img src="../../assets/images/icons8-edit-tag-96.png" class='icon_tools_edit'>
+							</a>
+							<a href="javascript:borrar({{categorium.id }})" title='Borrar esta Categoría'>
+								<img src="../../assets/images/icons8-remove-tag-96.png" class='icon_tools_edit'>
+
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</tbody>
+		</tr>
+		{% set i = i + 1 %}
+	{% else %}
+		<tr>
+			<td colspan="6">No se han creado Categorías</td>
+		</tr>
+	{% endfor %}
+</tbody></table><div class="text-right">
+<a href="{{ path('app_categoria_new2') }}" title='Crear una nueva categoría'>
+	<img src='../../assets/images/icons8-add-tag-96.png' class='icon_tools'>
+</a></div></div>{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base_admin2.html.twig' %}
+
+{% block title %}
+	{{ titlePage }}
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1>Editar Usuario</h1>
+		{{ include('user/_form.html.twig', {'button_label': 'Guardar'}) }}
+		<div class="row">
+			<div class="col-12 col-md-12 col-lg-12 text-right">
+				<button class="btn btn-secondary btn-lg" title='Regresar al listado' onclick="document.location='{{ path('app_user_index') }}'"><img src="../../assets/images/icons8-undo-96.png" class='icon_tools_edit'>
+				</button>
+				{{ include('user/_delete_form.html.twig') }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
